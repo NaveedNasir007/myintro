@@ -204,6 +204,166 @@
         background: var(--card);
         text-decoration: none;
       }
+  /* ── TASK CARDS ── */
+      .card {
+        background: var(--card);
+        border: 1px solid var(--border);
+        border-radius: var(--radius);
+        padding: 28px 32px;
+        margin-bottom: 24px;
+      }
+
+      /* ── Lists ── */
+      ol.styled,
+      ul.styled {
+        padding-left: 22px;
+        color: #ccc;
+      }
+      ol.styled li,
+      ul.styled li {
+        margin-bottom: 8px;
+      }
+      ul.tech {
+        list-style: none;
+        padding: 0;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+      }
+      ul.tech li {
+        background: var(--border);
+        border-radius: 6px;
+        padding: 6px 16px;
+        font-size: 0.9rem;
+        color: var(--accent2);
+        font-weight: 500;
+      }
+
+      /* ── Table ── */
+      .tbl-wrap {
+        overflow-x: auto;
+      }
+      table.styled {
+        width: 100%;
+        border-collapse: collapse;
+        font-size: 0.95rem;
+      }
+      table.styled thead th {
+        background: var(--border);
+        color: var(--accent);
+        padding: 12px 16px;
+        text-align: left;
+        font-weight: 600;
+        letter-spacing: 0.04em;
+      }
+      table.styled tbody tr {
+        border-bottom: 1px solid var(--border);
+      }
+      table.styled tbody tr:hover {
+        background: rgba(255, 255, 255, 0.02);
+      }
+      table.styled td {
+        padding: 12px 16px;
+        color: #ccc;
+      }
+
+      /* ── Form ── */
+      .form-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 18px;
+      }
+      @media (max-width: 600px) {
+        .form-grid {
+          grid-template-columns: 1fr;
+        }
+      }
+      .form-group {
+        display: flex;
+        flex-direction: column;
+        gap: 6px;
+      }
+      .form-group.full {
+        grid-column: 1 / -1;
+      }
+      label {
+        font-size: 0.85rem;
+        font-weight: 600;
+        color: var(--muted);
+        letter-spacing: 0.04em;
+        text-transform: uppercase;
+      }
+      input[type="text"],
+      input[type="email"],
+      input[type="password"],
+      select,
+      textarea {
+        background: var(--surface);
+        border: 1px solid var(--border);
+        border-radius: 8px;
+        padding: 10px 14px;
+        color: var(--text);
+        font-family: var(--ff-body);
+        font-size: 0.95rem;
+        transition: border-color 0.2s;
+        outline: none;
+      }
+      input:focus,
+      select:focus,
+      textarea:focus {
+        border-color: var(--accent);
+      }
+      .radio-group,
+      .check-group {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 14px;
+      }
+      .radio-group label,
+      .check-group label {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        text-transform: none;
+        font-size: 0.95rem;
+        font-weight: 400;
+        color: #ccc;
+        cursor: pointer;
+      }
+      input[type="radio"],
+      input[type="checkbox"] {
+        accent-color: var(--accent);
+        width: 16px;
+        height: 16px;
+      }
+
+      /* ── Images ── */
+      .img-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 16px;
+      }
+      @media (max-width: 600px) {
+        .img-grid {
+          grid-template-columns: 1fr;
+        }
+      }
+      .img-card {
+        border-radius: var(--radius);
+        overflow: hidden;
+        border: 1px solid var(--border);
+      }
+      .img-card img {
+        width: 100%;
+        height: 200px;
+        object-fit: cover;
+        display: block;
+      }
+      .img-caption {
+        padding: 10px 14px;
+        font-size: 0.85rem;
+        color: var(--muted);
+      }
 
       /* ── Portfolio / About ── */
       #about .about-grid {
